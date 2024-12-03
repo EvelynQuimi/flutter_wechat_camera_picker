@@ -193,6 +193,75 @@ class EnglishCameraPickerTextDelegate extends CameraPickerTextDelegate {
       'Switch to the ${sCameraLensDirectionLabel(value)} camera';
 }
 
+/// Text delegate implements with Spanish.
+class SpanishCameraPickerTextDelegate extends CameraPickerTextDelegate {
+  const SpanishCameraPickerTextDelegate();
+
+  @override
+  String get languageCode => 'es';
+
+  @override
+  String get confirm => 'Confirmar';
+
+  @override
+  String get shootingTips => 'Presiona para tomar la foto';
+
+  @override
+  String get shootingWithRecordingTips =>
+      'Presiona para tomar la foto. Mantén presionado para grabar.';
+
+  @override
+  String get shootingOnlyRecordingTips => 'Mantén presionado para grabar.';
+
+  @override
+  String get shootingTapRecordingTips => 'Presiona para grabar.';
+
+  @override
+  String get loadFailed => 'Carga fallida';
+
+  @override
+  String get loading => 'Cargando...';
+
+  @override
+  String get saving => 'Guardando...';
+
+  @override
+  String get sActionManuallyFocusHint => 'Manual';
+
+  @override
+  String get sActionPreviewHint => 'Previsualización';
+
+  @override
+  String get sActionRecordHint => 'Grabar';
+
+  @override
+  String get sActionShootHint => 'Tomar foto';
+
+  @override
+  String get sActionShootingButtonTooltip => 'Botón de captura';
+
+  @override
+  String get sActionStopRecordingHint => 'Parar grabación';
+
+  @override
+  String sCameraLensDirectionLabel(CameraLensDirection value) => value.name;
+
+  @override
+  String? sCameraPreviewLabel(CameraLensDirection? value) {
+    if (value == null) {
+      return null;
+    }
+    return '${sCameraLensDirectionLabel(value)} Previsualización de cámara';
+  }
+
+  @override
+  String sFlashModeLabel(FlashMode mode) => 'Modo flash: ${mode.name}';
+
+  @override
+  String sSwitchCameraLensDirectionLabel(CameraLensDirection value) =>
+      'Cambiar a la camara${sCameraLensDirectionLabel(value)} ';
+}
+
 /// Text delegate implemented with Vietnamese.
 /// Dịch tiếng Việt
 class VietnameseCameraPickerTextDelegate extends CameraPickerTextDelegate {
