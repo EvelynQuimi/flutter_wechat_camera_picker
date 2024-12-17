@@ -10,6 +10,7 @@ const List<CameraPickerTextDelegate> cameraPickerTextDelegates =
     <CameraPickerTextDelegate>[
   CameraPickerTextDelegate(),
   EnglishCameraPickerTextDelegate(),
+  SpanishCameraPickerTextDelegate(), 
   VietnameseCameraPickerTextDelegate(),
 ];
 
